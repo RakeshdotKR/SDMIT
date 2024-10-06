@@ -1,0 +1,74 @@
+<!-- HTML Media Elements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .media-group {
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        audio, video {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Media Elements Demo</h1>
+
+    <!-- Image Example -->
+    <div class="media-group">
+        <h2>Image Example</h2>
+        <p>This is an example of an image in HTML:</p>
+        <img src="https://via.placeholder.com/600x400" alt="Sample Image" />
+        <p><small>Image credit: Placeholder.com</small></p>
+    </div>
+
+    <!-- Audio Example -->
+    <div class="media-group">
+        <h2>Audio Example</h2>
+        <p>This is an example of an audio element in HTML:</p>
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p><small>Note: Add a valid audio file path for the "sample-audio.mp3".</small></p>
+    </div>
+
+    <!-- Video Example -->
+    <div class="media-group">
+        <h2>Video Example</h2>
+        <p>This is an example of a video element in HTML:</p>
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <p><small>Note: Add a valid video file path for the "sample-video.mp4".</small></p>
+    </div>
+
+    <!-- Embedding a YouTube Video -->
+    <div class="media-group">
+        <h2>Embedding a YouTube Video (iframe)</h2>
+        <p>This is an example of embedding a YouTube video using an iframe:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>

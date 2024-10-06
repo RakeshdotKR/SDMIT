@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h1>Job Application Portal</h1>
+
+    <form action="/submit-application" method="post" enctype="multipart/form-data">
+
+        <!-- Section 1: Personal Details -->
+        <fieldset>
+            <legend><b>Personal Details</b></legend>
+
+            <!-- Text Input: Full Name -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Full name" required><br><br>
+
+            <!-- Text Input: Address -->
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"><br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <!-- Date of Birth Input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <!-- Image Upload: Profile Picture -->
+            <label for="profilePic">Upload Profile Picture:</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*"><br><br>
+        </fieldset>
+        
+        <br>
+
+        <!-- Section 2: Professional Details -->
+        <fieldset>
+            <legend><b>Professional Information</b></legend>
+
+            <!-- Number Input: Years of Experience -->
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" min="0" max="50" required><br><br>
+
+            <!-- Radio Buttons: Employment Type -->
+            <label>Employment Type:</label><br>
+            <input type="radio" id="fullTime" name="employmentType" value="Full-Time" required>
+            <label for="fullTime">Full-Time</label><br>
+            <input type="radio" id="partTime" name="employmentType" value="Part-Time">
+            <label for="partTime">Part-Time</label><br>
+            <input type="radio" id="contract" name="employmentType" value="Contract">
+            <label for="contract">Contract</label><br><br>
+
+            <!-- Checkbox: Job Location Preferences -->
+            <label>Preferred Job Locations:</label><br>
+            <input type="checkbox" id="newYork" name="jobLocation" value="New York">
+            <label for="newYork">New York</label><br>
+            <input type="checkbox" id="sanFrancisco" name="jobLocation" value="San Francisco">
+            <label for="sanFrancisco">San Francisco</label><br>
+            <input type="checkbox" id="chicago" name="jobLocation" value="Chicago">
+            <label for="chicago">Chicago</label><br><br>
+
+            <!-- File Upload: Resume -->
+            <label for="resume">Upload Resume (PDF only):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required><br><br>
+
+            <!-- LinkedIn Profile URL -->
+            <label for="linkedin">LinkedIn Profile URL:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile" required><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Section 3: Interview Preferences -->
+        <fieldset>
+            <legend><b>Interview Preferences</b></legend>
+
+            <!-- Range Slider: Expected Salary -->
+            <label for="salary">Expected Salary (in USD):</label>
+            <input type="range" id="salary" name="salary" min="30000" max="200000" step="1000" value="75000">
+            <output id="salaryOutput">75000</output><br><br>
+
+            <!-- Week Input: Preferred Interview Week -->
+            <label for="interviewWeek">Preferred Interview Week:</label>
+            <input type="week" id="interviewWeek" name="interviewWeek" required><br><br>
+
+            <!-- Month Input: Availability Starting Month -->
+            <label for="startMonth">Availability Starting From:</label>
+            <input type="month" id="startMonth" name="startMonth" required><br><br>
+
+            <!-- Time Input: Preferred Interview Time -->
+            <label for="interviewTime">Preferred Interview Time:</label>
+            <input type="time" id="interviewTime" name="interviewTime" required><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Section 4: Submission -->
+        <fieldset>
+            <legend><b>Submit Application</b></legend>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Application"><br><br>
+
+            <!-- Reset Button -->
+            <input type="reset" value="Reset Form">
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

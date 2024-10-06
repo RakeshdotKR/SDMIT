@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Fonts Example</title>
+	<style>
+    	body {
+        	font-family: "Arial", sans-serif;
+    	}
+ 
+    	h1 {
+ 	       font-family: "Georgia", serif;
+        	font-size: 36px;
+        	font-weight: bold;
+    	}
+ 
+    	p {
+        	font-size: 18px;
+        	font-weight: 300;
+        	line-height: 1.6;
+    	}
+ 
+    	.italic-text {
+        	font-style: italic;
+    	}
+ 
+    	.small-caps-text {
+        	font-variant: small-caps;
+    	}
+ 
+    	.custom-font {
+        	font: italic bold 20px/2 "Verdana", sans-serif;
+    	}
+	</style>
+</head>
+<body>
+ 
+	<h1>Heading with Georgia Font</h1>
+	<p>This paragraph is displayed using the Arial font, with a light weight and a line height of 1.6.</p>
+	
+	<p class="italic-text">This text is italicized using the font-style property.</p>
+	
+	<p class="small-caps-text">This text is displayed in small caps using the font-variant property.</p>
+	
+	<p class="custom-font">This text uses a custom font shorthand, combining multiple font properties.</p>
+ 
+</body>
+</html>

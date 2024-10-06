@@ -1,0 +1,150 @@
+<!--  HTML Form with Event Handlers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 8px;
+            width: 100%;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Form Events Example</h1>
+
+    <form onsubmit="return handleSubmit()" onreset="handleReset()">
+
+        <!-- onfocus and onblur -->
+        <div class="form-group">
+            <label for="name">Name (onfocus/onblur):</label>
+            <input type="text" id="name" name="name" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+        </div>
+
+        <!-- onchange -->
+        <div class="form-group">
+            <label for="country">Country (onchange):</label>
+            <select id="country" name="country" onchange="handleChange(this)">
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="au">Australia</option>
+            </select>
+        </div>
+
+        <!-- oncontextmenu -->
+        <div class="form-group">
+            <label for="email">Email (oncontextmenu):</label>
+            <input type="email" id="email" name="email" oncontextmenu="handleContextMenu()">
+        </div>
+
+        <!-- oninput -->
+        <div class="form-group">
+            <label for="bio">Bio (oninput):</label>
+            <textarea id="bio" name="bio" oninput="handleInput(this)"></textarea>
+        </div>
+
+        <!-- oninvalid -->
+        <div class="form-group">
+            <label for="password">Password (oninvalid):</label>
+            <input type="password" id="password" name="password" required oninvalid="handleInvalid(this)">
+        </div>
+
+        <!-- onsearch -->
+        <div class="form-group">
+            <label for="search">Search (onsearch):</label>
+            <input type="search" id="search" name="search" onsearch="handleSearch(this)" placeholder="Search...">
+        </div>
+
+        <!-- onselect -->
+        <div class="form-group">
+            <label for="text">Select Text (onselect):</label>
+            <input type="text" id="text" name="text" onselect="handleSelect(this)">
+        </div>
+
+        <!-- Form buttons -->
+        <div class="form-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+    <script>
+        // onfocus event handler
+        function handleFocus(element) {
+            element.style.backgroundColor = "#e0f7fa";
+            console.log("Element got focus");
+        }
+
+        // onblur event handler
+        function handleBlur(element) {
+            element.style.backgroundColor = "";
+            console.log("Element lost focus");
+        }
+
+        // onchange event handler
+        function handleChange(element) {
+            alert("You selected: " + element.value);
+        }
+
+        // oncontextmenu event handler
+        function handleContextMenu() {
+            alert("Context menu triggered!");
+            return false; // prevent the default context menu
+        }
+
+        // oninput event handler
+        function handleInput(element) {
+            console.log("User input: " + element.value);
+        }
+
+        // oninvalid event handler
+        function handleInvalid(element) {
+            alert("Invalid input in: " + element.name);
+        }
+
+        // onsearch event handler
+        function handleSearch(element) {
+            alert("You searched for: " + element.value);
+        }
+
+        // onselect event handler
+        function handleSelect(element) {
+            const selectedText = window.getSelection().toString();
+            alert("You selected: " + selectedText);
+        }
+
+        // onsubmit event handler
+        function handleSubmit() {
+            alert("Form is being submitted");
+            return true; // allow form submission
+        }
+
+        // onreset event handler
+        function handleReset() {
+            alert("Form has been reset");
+        }
+    </script>
+
+</body>
+</html>

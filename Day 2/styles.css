@@ -1,0 +1,31 @@
+
+    	/* CSS starts here */
+    	body {
+   	     background-color: lightyellow;
+        	font-family: Arial, sans-serif;
+    	}
+ 
+    	h1 {
+        	color: darkblue;
+        	text-align:left;
+    	}
+ 
+    	p {
+        	font-size: 18px;
+        	color: darkgray;
+      	    line-height: 2.6;
+    	}
+ 
+    	.highlight {
+        	color: rgb(202, 111, 111);
+        	font-weight: bold;
+    	}
+ 
+    	
+#footer {
+        	text-align: center;
+        	margin-top: 50px;
+        	font-size: 14px;
+        	color: gray;
+        }
+	

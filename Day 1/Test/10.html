@@ -1,0 +1,39 @@
+<!-- IFrames -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrames</title>
+ </head>
+ <body>
+    <h4>IFrames</h4>
+    <p><pre>
+    Attribute           Details
+    name                Sets the element's name, to be used with an a tag to change the iframe's src.
+    width               Sets the element's width in pixels.
+    height              Sets the element's height in pixels.
+    src                 Specifies the page that will be displayed in the frame.
+    srcdoc              Specifies the content that will be displayed in the frame, assuming the browser supports it. The
+                        content must be valid HTML.
+
+    sandbox             When set, the contents of the iframe is treated as being from a unique origin and features
+                        including scripts, plugins, forms and popups will be disabled. Restrictions can be selectively
+                        relaxed by adding a space separated list of values. See the table in Remarks for possible values.
+                        allowfullscreen Whether to allow the iframe’s contents to use requestFullscreen()
+    </pre></p>
+
+    <!-- Basics of an Inline Frame -->
+    <iframe src="1.html" width="500" height="500"></iframe>
+    <br>
+
+    <!-- Sandboxing -->
+    <iframe sandbox src="http://example.com/"></iframe>
+    
+    <!-- To allow the page to run scripts and submit forms, add allow-scripts and allow-forms to the sandbox attribute. -->
+    <iframe sandbox="allow-scripts allow-forms" src="http://example.com/"></iframe>
+
+    
+
+ </body>
+ </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Height, Width, and Overflow Example</title>
+	<style>
+    	.fixed-box {
+        	width: 300px;
+        	height: 200px;
+        	background-color: lightblue;
+        	margin-bottom: 20px;
+    	}
+ 
+    	.responsive-box {
+        	width: 100vw;
+        	height: 50vh; /* 50% of the viewport height */
+        	background-color: lightgreen;
+        	margin-bottom: 20px;
+    	}
+ 
+    	.overflow-box {
+        	width: 300px;
+        	height: 150px;
+        	background-color: lightcoral;
+        	overflow: scroll  ;
+   	        padding: 10px;
+    	}
+	</style>
+</head>
+<body>
+ 
+	<h2>Fixed Height and Width</h2>
+	<div class="fixed-box">
+    	This box has a fixed width of 300px and height of 200px.
+	</div>
+ 
+	<h2>Responsive Height and Width</h2>
+	<div class="responsive-box">
+    	This box is responsive, with a width of 100% and height of 50% of the viewport height.
+	</div>
+ 
+	<h2>Overflow with Scroll</h2>
+	<div class="overflow-box">
+    	This box has a fixed size, and its content will overflow if it is too long.
+    	<br><br>
+    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec aliquam varius, neque eros vehicula dolor, nec dignissim lectus risus at dolor.
+    	<br><br>
+    	Vestibulum tincidunt lacus vel convallis feugiat. Nam vel libero nec felis fringilla suscipit sit amet ac arcu. Cras sit amet orci non orci luctus gravida.
+	</div>
+</body>
+</html>

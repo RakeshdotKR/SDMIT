@@ -1,0 +1,87 @@
+<!-- Selection Menu Controls -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection Menu Controls</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      select {
+        width: 100%;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Selection Menu Controls</h1>
+
+    <!-- Form to demonstrate selection menus -->
+    <form action="submit.html" method="POST">
+      <!-- Single Select Dropdown -->
+      <div class="form-group">
+        <label for="country">Select Your Country:</label>
+        <select id="country" name="country" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="in">India</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+          <option value="au">Australia</option>
+        </select>
+      </div>
+
+      <!-- Grouped Options in Select -->
+      <div class="form-group">
+        <label for="car">Select Your Car:</label>
+        <select id="car" name="car">
+          <option value="">-- Select your car --</option>
+          \
+          <optgroup label="Indian Cars">
+            <option value="tata">Tata</option>
+            <option value="mahindra">Mahindra</option>
+          </optgroup>
+          <optgroup label="German Cars">
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </optgroup>
+          <optgroup label="Japanese Cars">
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="nissan">Nissan</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <!-- Multi-Select Dropdown -->
+      <div class="form-group">
+        <label for="hobbies"
+          >Select Your Hobbies (you can choose multiple):</label
+        >
+        <select id="hobbies" name="hobbies[]" multiple size="4">
+          <option value="reading">Reading</option>
+          <option value="traveling">Traveling</option>
+          <option value="coding">Coding</option>
+          <option value="gaming">Gaming</option>
+          <option value="sports">Sports</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

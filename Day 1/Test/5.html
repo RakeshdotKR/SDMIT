@@ -1,0 +1,42 @@
+<!-- Classes and IDs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .highlight { color: orange; }
+        div.highlight { color: blueviolet; }
+
+        #example-id { color: brown; }
+    </style>
+  </head>
+  <body>
+    <p>
+      Classes and IDs make referencing HTML elements from scripts and
+      stylesheets easier. The class attribute can be used on one or more tags
+      and is used by CSS for styling. IDs however are intended to refer to a
+      single element, meaning the same ID should never be used twice. IDs are
+      generally used with JavaScript and internal document links, and are
+      discouraged in CSS.
+    </p>
+
+    <!-- Giving an element a class Classes are identifiers for the elements that they
+    are assigned to. Use the class attribute to assign a class to an element. -->
+    <div class="example-class"></div>
+    <!-- To assign multiple classes to an element, separate the class names with spaces. -->
+    <div class="class1 class2"></div>
+
+    <div class="highlight">Mysuru</div>
+    <span class="highlight">Dasara</span>
+    <br><br>
+    <!-- ********************************************************************** -->
+    <!-- Giving an element an ID -->
+    <div id="example-id">Mysuru</div>
+    <span id="example-id">Dasara</span>
+
+
+
+  </body>
+</html>
